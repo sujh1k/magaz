@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ліхтарі та лампи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class='navbar'>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <h1>WILDCAMP</h1>
+
+        <nav class ="nav-menu" id="navMenu">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </nav>
+    </header>
+
+    <h2 class="products">ліхтарі та лампи</h2>
+
+    <div class="filters-section">
+        <button class="filters-toggle" id="filtersToggle">🔽 Фільтри</button>
+        <div class="filters-container" id="filtersContainer" style="display: none;">
+            <div class="filter-group">
+                <label>Ціна (грн)</label>
+                <div class="price-range">
+                    <input type="number" id="priceMin" placeholder="від" min="0" value="0">
+                    <span>-</span>
+                    <input type="number" id="priceMax" placeholder="до" min="0" value="100000">
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Сортування</label>
+                <select id="sortSelect">
+                    <option value="">Без сортування</option>
+                    <option value="price-asc">Від найдешевших до найдорожчих</option>
+                    <option value="price-desc">Від найдорожчих до найдешевших</option>
+                    <option value="name">За назвою</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button class="btn-apply" id="applyFilters">Застосувати</button>
+                <button class="btn-reset" id="resetFilters">Скинути</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+        <div class="product-card" data-price="450">
+            <img src="img/cf1d9f87ddb707ba554784022cd0.jpg" class="product-img" alt="Карманний ліхтарик">
+            <h3>Ліхтар Skif Outdoor Focus I</h3>
+            <p>Компактний ліхтарик для нічних походів.</p>
+            <p class="price">Ціна: 450 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1050">
+            <img src="img/6-1491_2024_nitecoreua_1733828375005736100-113x113.webp" class="product-img" alt="Тактичний ліхтарик">
+            <h3>Надлегкий налобний ліхтар Nitecore HA11 UHE</h3>
+            <p>Потужний ліхтарик із кількома режимами світла.</p>
+            <p class="price">Ціна: 1050 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1200">
+            <img src="img/318351077.webp" class="product-img" alt="Кемпінговий ліхтарик">
+            <h3>Ліхтар акумуляторний RZTK Light COB</h3>
+            <p>Світильник для кемпінгу з довгим часом роботи.</p>
+            <p class="price">Ціна: 1200 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1700">
+            <img src="img/6-1134_V2-601x601.webp" class="product-img" alt="Робоча лампа">
+            <h3>Тактичний ліхтар Nitecore P10 V2</h3>
+            <p>Яскрава лампа для ремонту й кемпінгу.</p>
+            <p class="price">Ціна: 1700 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1650">
+            <img src="img/nalobnyj-fonar-akkumulyatornyj-x-balog-bl-t70-p70-600x600.jpg" class="product-img" alt="Палаткова лампа">
+            <h3>X-Balog, ZOOM до 500 м, 3х18650</h3>
+            <p>Зручна лампа для освітлення в палатці.</p>
+            <p class="price">Ціна: 1650 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="2300">
+            <img src="img/lampa-likhtar-na-akumuliatori-z-pidvisom-portatyvna-usb-led-lampochka-svitylnyk-3600-mah-al-150-80520407067327.webp" class="product-img" alt="Ліхтар USB">
+            <h3>Лампа ліхтар на акумуляторі з підвісом</h3>
+            <p>Перезаряджаємий ліхтар із USB-зарядкою.</p>
+            <p class="price">Ціна: 2300 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="2580">
+            <img src="img/75845685148890.webp" class="product-img" alt="Світлодіодна лампа">
+            <h3>Аварійне світло з сонячною зарядкою</h3>
+            <p>Потужна лампа для освітлення великого простору.</p>
+            <p class="price">Ціна: 2580 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1900">
+            <img src="img/lihtar-kempingovij-skif-outdoor-light-drop-max-bla-0-600x600.webp" class="product-img" alt="Ліхтарик з кріпленням">
+            <h3>Ліхтар кемпінговий Skif Outdoor Light Drop Max</h3>
+            <p>Ліхтарик, який можна закріпити на касці або рюкзаку.</p>
+            <p class="price">Ціна: 1900 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+    </div>
+
+    <div class = "footer">
+        <div class = "img-footer">
+            <img class = "footer-logo" src="img/logo.png" alt="Logo">
+        </div>
+        <div class = "footer-buttons">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </div>
+        <div class = "contacts-footer">
+            <p>Контакти:</p>
+            <p>Телефон: +380 123 456 789</p>
+            <p>Email: info@outdoorstore.com</p>
+        </div>
+        <div class = "copyright">
+            <p>&copy; 2026 Outdoor Store. Всі права захищені.</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>спальні мішки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class='navbar'>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <h1>WILDCAMP</h1>
+
+        <nav class ="nav-menu" id="navMenu">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </nav>
+    </header>
+
+    <h2 class="products">спальні мішки</h2>
+
+    <div class="filters-section">
+        <button class="filters-toggle" id="filtersToggle">🔽 Фільтри</button>
+        <div class="filters-container" id="filtersContainer" style="display: none;">
+            <div class="filter-group">
+                <label>Ціна (грн)</label>
+                <div class="price-range">
+                    <input type="number" id="priceMin" placeholder="від" min="0" value="0">
+                    <span>-</span>
+                    <input type="number" id="priceMax" placeholder="до" min="0" value="100000">
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Сортування</label>
+                <select id="sortSelect">
+                    <option value="">Без сортування</option>
+                    <option value="price-asc">Від найдешевших до найдорожчих</option>
+                    <option value="price-desc">Від найдорожчих до найдешевших</option>
+                    <option value="name">За назвою</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button class="btn-apply" id="applyFilters">Застосувати</button>
+                <button class="btn-reset" id="resetFilters">Скинути</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+        <div class="product-card" data-price="1200">
+            <img src="img/mishok.webp" class="product-img" alt="Спальний мішок зимовий">
+            <h3>Спальний мішок зимовий</h3>
+            <p>Теплий спальний мішок для холодних ночей.</p>
+            <p class="price">Ціна: 1200 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="900">
+            <img src="img/mishok.webp" class="product-img" alt="Спальний мішок літній">
+            <h3>Спальний мішок літній</h3>
+            <p>Легкий спальний мішок для літніх походів.</p>
+            <p class="price">Ціна: 900 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1700">
+            <img src="img/mishok.webp" class="product-img" alt="Двохмісний спальний мішок">
+            <h3>Двохмісний спальний мішок</h3>
+            <p>Просторий мішок для двох осіб.</p>
+            <p class="price">Ціна: 1700 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1400">
+            <img src="img/mishok.webp" class="product-img" alt="Мумієподібний спальний мішок">
+            <h3>Мумієподібний спальний мішок</h3>
+            <p>Анатомічний мішок для збереження тепла.</p>
+            <p class="price">Ціна: 1400 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="990">
+            <img src="img/mishok.webp" class="product-img" alt="Ультралегкий спальний мішок">
+            <h3>Ультралегкий спальний мішок</h3>
+            <p>Компактний і легкий мішок для трекінгу.</p>
+            <p class="price">Ціна: 990 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="2100">
+            <img src="img/mishok.webp" class="product-img" alt="Спальний мішок з капюшоном">
+            <h3>Спальний мішок з капюшоном</h3>
+            <p>Мішок з капюшоном для додаткового тепла.</p>
+            <p class="price">Ціна: 2100 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1320">
+            <img src="img/mishok.webp" class="product-img" alt="Спальний мішок з утеплювачем">
+            <h3>Спальний мішок з утеплювачем</h3>
+            <p>Комфортний мішок для прохолодної погоди.</p>
+            <p class="price">Ціна: 1320 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1950">
+            <img src="img/mishok.webp" class="product-img" alt="Теплий спальний мішок">
+            <h3>Теплий спальний мішок</h3>
+            <p>Спальний мішок для мінусових температур.</p>
+            <p class="price">Ціна: 1950 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+    </div>
+
+    <div class = "footer">
+        <div class = "img-footer">
+            <img class = "footer-logo" src="img/logo.png" alt="Logo">
+        </div>
+        <div class = "footer-buttons">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </div>
+        <div class = "contacts-footer">
+            <p>Контакти:</p>
+            <p>Телефон: +380 123 456 789</p>
+            <p>Email: info@outdoorstore.com</p>
+        </div>
+        <div class = "copyright">
+            <p>&copy; 2026 Outdoor Store. Всі права захищені.</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

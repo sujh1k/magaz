@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>гамаки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class='navbar'>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <h1>WILDCAMP</h1>
+
+        <nav class ="nav-menu" id="navMenu">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </nav>
+    </header>
+
+    <h2 class="products">гамаки</h2>
+
+    <div class="filters-section">
+        <button class="filters-toggle" id="filtersToggle">🔽 Фільтри</button>
+        <div class="filters-container" id="filtersContainer" style="display: none;">
+            <div class="filter-group">
+                <label>Ціна (грн)</label>
+                <div class="price-range">
+                    <input type="number" id="priceMin" placeholder="від" min="0" value="0">
+                    <span>-</span>
+                    <input type="number" id="priceMax" placeholder="до" min="0" value="100000">
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Сортування</label>
+                <select id="sortSelect">
+                    <option value="">Без сортування</option>
+                    <option value="price-asc">Від найдешевших до найдорожчих</option>
+                    <option value="price-desc">Від найдорожчих до найдешевших</option>
+                    <option value="name">За назвою</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button class="btn-apply" id="applyFilters">Застосувати</button>
+                <button class="btn-reset" id="resetFilters">Скинути</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+        <div class="product-card" data-price="1800">
+            <img src="img/hamak.webp" class="product-img" alt="Туристичний гамак">
+            <h3>Туристичний гамак</h3>
+            <p>Легкий та міцний гамак для відпочинку на природі.</p>
+            <p class="price">Ціна: 1800 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="2400">
+            <img src="img/hamak.webp" class="product-img" alt="Двомісний гамак">
+            <h3>Двомісний гамак</h3>
+            <p>Просторий гамак для двох осіб.</p>
+            <p class="price">Ціна: 2400 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1200">
+            <img src="img/hamak.webp" class="product-img" alt="Портативний гамак">
+            <h3>Портативний гамак</h3>
+            <p>Компактний гамак для легких походів.</p>
+            <p class="price">Ціна: 1200 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="2100">
+            <img src="img/hamak.webp" class="product-img" alt="Гамак з москітною сіткою">
+            <h3>Гамак з москітною сіткою</h3>
+            <p>Захищений гамак від комах на природі.</p>
+            <p class="price">Ціна: 2100 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="950">
+            <img src="img/hamak.webp" class="product-img" alt="Міцний гамак">
+            <h3>Міцний гамак</h3>
+            <p>Надійний гамак із посиленої тканини.</p>
+            <p class="price">Ціна: 950 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1600">
+            <img src="img/hamak.webp" class="product-img" alt="Тропічний гамак">
+            <h3>Тропічний гамак</h3>
+            <p>Гамак із класичним дизайном для релаксу.</p>
+            <p class="price">Ціна: 1600 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1350">
+            <img src="img/hamak.webp" class="product-img" alt="Гамак з підставкою">
+            <h3>Гамак з підставкою</h3>
+            <p>Гамак із вбудованою металевою підставкою.</p>
+            <p class="price">Ціна: 1350 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1750">
+            <img src="img/hamak.webp" class="product-img" alt="Водостійкий гамак">
+            <h3>Водостійкий гамак</h3>
+            <p>Гамак із захистом від вологи для будь-якої погоди.</p>
+            <p class="price">Ціна: 1750 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+    </div>
+
+    <div class = "footer">
+        <div class = "img-footer">
+            <img class = "footer-logo" src="img/logo.png" alt="Logo">
+        </div>
+        <div class = "footer-buttons">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </div>
+        <div class = "contacts-footer">
+            <p>Контакти:</p>
+            <p>Телефон: +380 123 456 789</p>
+            <p>Email: info@outdoorstore.com</p>
+        </div>
+        <div class = "copyright">
+            <p>&copy; 2026 Outdoor Store. Всі права захищені.</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Намети</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class='navbar'>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <h1>WILDCAMP</h1>
+
+        <nav class ="nav-menu" id="navMenu">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </nav>
+    </header>
+
+    <h2 class="products">намети</h2>
+
+    <div class="filters-section">
+        <button class="filters-toggle" id="filtersToggle">🔽 Фільтри</button>
+        
+        <div class="filters-container" id="filtersContainer" style="display: none;">
+            <div class="filter-group">
+                <label>Ціна (грн)</label>
+                <div class="price-range">
+                    <input type="number" id="priceMin" placeholder="від" min="0" value="0">
+                    <span>-</span>
+                    <input type="number" id="priceMax" placeholder="до" min="0" value="100000">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Сортування</label>
+                <select id="sortSelect">
+                    <option value="">Без сортування</option>
+                    <option value="price-asc">Від найдешевших до найдорожчих</option>
+                    <option value="price-desc">Від найдорожчих до найдешевших</option>
+                    <option value="name">За назвою</option>
+                </select>
+            </div>
+
+            <div class="filter-actions">
+                <button class="btn-apply" id="applyFilters">Застосувати</button>
+                <button class="btn-reset" id="resetFilters">Скинути</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+        <div class="product-card" data-price="3526">
+            <img src="img/namet.jpg" class="product-img" alt="Туристичний намет">
+            <h3>Туристичний намет Milo Trekker II</h3>
+            <p>Легкий та водонепроникний намет для комфортного відпочинку на природі.</p>
+            <p class="price">Ціна: 3526 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+
+        <div class="product-card" data-price="4548">
+            <img src="img/trampcamp3.webp" class="product-img" alt="Намет 3-місний">
+            <h3>Намет Tramp Lite Camp 3</h3>
+            <p>Комфортний намет на 3 особи з хорошою вентиляцією та тамбуром.</p>
+            <p class="price">Ціна: 4548 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+
+        <div class="product-card" data-price="1729">
+            <img src="img/kadvafesta.webp" class="product-img" alt="Кемпінговий намет">
+            <h3>Намет KADVA Festa 2 блакитний</h3>
+            <p>Просторий намет для сімейного кемпінгу з двома входами.</p>
+            <p class="price">Ціна: 1729 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+
+        <div class="product-card" data-price="1200">
+            <img src="img/skif.jpg" class="product-img" alt="Пляжний намет">
+            <h3>Намет Skif Outdoor Adventure I</h3>
+            <p>Легкий намет для пляжу з захистом від сонця.</p>
+            <p class="price">Ціна: 1200 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+
+        <div class="product-card" data-price="6179">
+            <img src="img/5904823432374_20.webp" class="product-img" alt="Експедиційний намет">
+            <h3>Namiot kempingowy KADVA 2.1 Pro szary</h3>
+            <p>Професійний намет для серйозних походів в екстремальних умовах.</p>
+            <p class="price">Ціна: 6179 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+
+        <div class="product-card" data-price="1840">
+            <img src="img/60753_namet-mil-tec-mini-pack-super-2-misnij-olive-104302.avif" class="product-img" alt="Мініатюрний намет">
+            <h3>Намет Mil-Tec Mini Pack Super 2-місний</h3>
+            <p>Компактний намет для одної особи, ідеальний для походів.</p>
+            <p class="price">Ціна: 1840 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+
+        <div class="product-card" data-price="3900">
+            <img src="img/4503164224_w640_h640_palatka-3-h-mestnaya.webp" class="product-img" alt="Tuneling намет">
+            <h3>Намет Tuneling 3-місний</h3>
+            <p>Намет з тоннельною конструкцією, стійкий до вітру.</p>
+            <p class="price">Ціна: 3900 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+
+        <div class="product-card" data-price="2100">
+            <img src="img/4df3322babe9f93f548da8478b2d.jpg" class="product-img" alt="Геодезичний намет">
+            <h3>Намет Skif Outdoor Adventure I 200x150 см</h3>
+            <p>Стійкий намет геодезичної форми для стійкості на вітру.</p>
+            <p class="price">Ціна: 2100 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+    </div>
+
+    <div class = "footer">
+        <div class = "img-footer">
+            <img class = "footer-logo" src="img/logo.png" alt="Logo">
+        </div>
+        <div class = "footer-buttons">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </div>
+        <div class = "contacts-footer">
+            <p>Контакти:</p>
+            <p>Телефон: +380 123 456 789</p>
+            <p>Email: info@outdoorstore.com</p>
+        </div>
+        <div class = "copyright">
+            <p>&copy; 2026 Outdoor Store. Всі права захищені.</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

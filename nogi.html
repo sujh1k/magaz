@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ножі та мультитули</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class='navbar'>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <h1>WILDCAMP</h1>
+
+        <nav class ="nav-menu" id="navMenu">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </nav>
+    </header>
+
+    <h2 class="products">ножі та мультитули</h2>
+
+    <div class="filters-section">
+        <button class="filters-toggle" id="filtersToggle">🔽 Фільтри</button>
+        <div class="filters-container" id="filtersContainer" style="display: none;">
+            <div class="filter-group">
+                <label>Ціна (грн)</label>
+                <div class="price-range">
+                    <input type="number" id="priceMin" placeholder="від" min="0" value="0">
+                    <span>-</span>
+                    <input type="number" id="priceMax" placeholder="до" min="0" value="100000">
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Сортування</label>
+                <select id="sortSelect">
+                    <option value="">Без сортування</option>
+                    <option value="price-asc">Від найдешевших до найдорожчих</option>
+                    <option value="price-desc">Від найдорожчих до найдешевших</option>
+                    <option value="name">За назвою</option>
+                </select>
+            </div>
+            <div class="filter-actions">
+                <button class="btn-apply" id="applyFilters">Застосувати</button>
+                <button class="btn-reset" id="resetFilters">Скинути</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+        <div class="product-card" data-price="4372">
+            <img src="img/shopping.webp" class="product-img" alt="Складаний ніж Victorinox Outrider 11,1 см">
+            <h3>Складаний ніж Victorinox Outrider 11,1 см</h3>
+            <p>Жива легенда у форматі великого кишенькового ножа. Мужній дизайн з 14 функціями.</p>
+            <p class="price">Ціна: 4372 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1800">
+            <img src="img/skladnoy-nozh-victorinox-spartan-13603.jpg" class="product-img" alt="Тактичний ніж">
+            <h3>Складаний ніж Victorinox Spartan 1.3603</h3>
+            <p>Середній швейцарський армійський ніж 91 мм з 12 функціями та штопором.</p>
+            <p class="price">Ціна: 1800 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="3995">
+            <img src="img/multytul-leatherman-bond-mossy-slate-neilonovyi-chokhol-833309-27290811517390.webp" class="product-img" alt="Мультитул">
+            <h3>Мультитул Leatherman Bond Mossy Slate 833309</h3>
+            <p>Універсальний набір інструментів у компактному корпусі.</p>
+            <p class="price">Ціна: 3995 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="2356">
+            <img src="img/karmannyy-multitul-leatherman-free-t4-arctic-1-1000x1000.webp" class="product-img" alt="Ніж для виживання">
+            <h3>Кишеньковий мультитул Leatherman Free T4 Evergreen</h3>
+            <p>Надійний ніж із додатковими функціями для походів.</p>
+            <p class="price">Ціна: 2356 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="3689">
+            <img src="img/crunch-5-B-1000x1000.webp" class="product-img" alt="Туристичний ніж">
+            <h3>Мультитул Leatherman Crunch</h3>
+            <p>Легкий ніж для кемпінгових та туристичних поїздок.</p>
+            <p class="price">Ціна: 3689 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="1985">
+            <img src="img/multitul-nextool-mini-flagship-zeleniy-1-1000x1000.webp" class="product-img" alt="Рибальський ніж">
+            <h3>Рибальський ніж</h3>
+            <p>Зручний ніж для обробки риби на природі.</p>
+            <p class="price">Ціна: 1985 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="2100">
+            <img src="img/6973907630608_40.webp" class="product-img" alt="Ніж з пилкою">
+            <h3>Мультитул Nextool Flagship Pro F30</h3>
+            <p>Ніж із вбудованою пилкою для різних завдань.</p>
+            <p class="price">Ціна: 2100 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+        <div class="product-card" data-price="700">
+            <img src="img/multitul-nextool-mini-pocket-knife-chorniy-1-1000x1000.webp" class="product-img" alt="Мисливський ніж">
+            <h3>Мультитул Nextool Mini Pocket Knife чорний</h3>
+            <p>Ніж для мисливських походів із гострим лезом.</p>
+            <p class="price">Ціна: 700 грн</p>
+            <button class="add-to-cart">додати в кошик</button>
+        </div>
+    </div>
+
+    <div class = "footer">
+        <div class = "img-footer">
+            <img class = "footer-logo" src="img/logo.png" alt="Logo">
+        </div>
+        <div class = "footer-buttons">
+            <a href = "index.html">головна</a>
+            <a href = "catalog.html">каталог</a>
+            <a href = "about.html">about</a>
+            <a href = "contacts.html">контакти</a>
+            <a href = "cart.html">кошик</a>
+            <a href = "delivery.html">доставка</a>
+            <a href = "login.html">log in</a>
+            <a href = "register.html">реєстрація</a>
+        </div>
+        <div class = "contacts-footer">
+            <p>Контакти:</p>
+            <p>Телефон: +380 123 456 789</p>
+            <p>Email: info@outdoorstore.com</p>
+        </div>
+        <div class = "copyright">
+            <p>&copy; 2026 Outdoor Store. Всі права захищені.</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
