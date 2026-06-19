@@ -25,6 +25,20 @@
 
     <h2 class="products">кошик</h2>
 
+    <main class="cart-container">
+        <div class="cart-list" id="cartItems">
+            <!-- items will be rendered here by main.js -->
+        </div>
+        <aside class="cart-summary">
+            <h3>Підсумок</h3>
+            <p>Всього: <span id="cartTotal">0 грн</span></p>
+            <div class="cart-actions">
+                <button id="clearCart">Очистити кошик</button>
+                <button id="checkout">Оформити замовлення</button>
+            </div>
+        </aside>
+    </main>
+
     <div class = "footer">
         <div class = "img-footer">
             <img class = "footer-logo" src="img/logo.png" alt="Logo">
