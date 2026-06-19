@@ -228,3 +228,91 @@ if (productsGrid && productCards.length > 0) {
     }
 })();
 
+(function() {
+    function getUsers() {
+        try {
+            return JSON.parse(localStorage.getItem('usersList') || '[]');
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function saveUsers(users) {
+        localStorage.setItem('usersList', JSON.stringify(users));
+    }
+
+    function showMessage(element, text, type) {
+        if (!element) return;
+        element.textContent = text;
+        element.classList.remove('auth-message--error', 'auth-message--success');
+        if (type === 'success') element.classList.add('auth-message--success');
+        if (type === 'error') element.classList.add('auth-message--error');
+    }
+
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+            const password = document.getElementById('loginPassword').value;
+            const loginMessage = document.getElementById('loginMessage');
+            if (!email || !password) {
+                showMessage(loginMessage, 'Будь ласка, заповніть всі поля.', 'error');
+                return;
+            }
+            const users = getUsers();
+            const user = users.find(u => u.email === email);
+            if (!user) {
+                showMessage(loginMessage, 'Користувач не знайдено. Перевірте email або зареєструйтесь.', 'error');
+                return;
+            }
+            if (user.password !== password) {
+                showMessage(loginMessage, 'Неправильний пароль.', 'error');
+                return;
+            }
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            showMessage(loginMessage, 'Ви успішно увійшли! Перенаправлення...', 'success');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 900);
+        });
+    }
+
+    const registerForm = document.getElementById('registerForm');
+    if (registerForm) {
+        registerForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('registerName').value.trim();
+            const email = document.getElementById('registerEmail').value.trim().toLowerCase();
+            const password = document.getElementById('registerPassword').value;
+            const confirm = document.getElementById('registerConfirm').value;
+            const registerMessage = document.getElementById('registerMessage');
+            if (!name || !email || !password || !confirm) {
+                showMessage(registerMessage, 'Будь ласка, заповніть всі поля.', 'error');
+                return;
+            }
+            if (password.length < 6) {
+                showMessage(registerMessage, 'Пароль має бути щонайменше 6 символів.', 'error');
+                return;
+            }
+            if (password !== confirm) {
+                showMessage(registerMessage, 'Паролі не співпадають.', 'error');
+                return;
+            }
+            const users = getUsers();
+            if (users.some(u => u.email === email)) {
+                showMessage(registerMessage, 'Цей email вже використовується.', 'error');
+                return;
+            }
+            const newUser = { name, email, password };
+            users.push(newUser);
+            saveUsers(users);
+            localStorage.setItem('currentUser', JSON.stringify(newUser));
+            showMessage(registerMessage, 'Реєстрація успішна! Ви увійшли в систему.', 'success');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 900);
+        });
+    }
+})();
+

@@ -25,6 +25,23 @@
 
     <h2 class="products">реєстрація</h2>
 
+    <main class="auth-page">
+        <form class="auth-form" id="registerForm">
+            <h3>Створіть акаунт</h3>
+            <label for="registerName">Ім'я</label>
+            <input type="text" id="registerName" placeholder="Ваше ім'я" required>
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" placeholder="example@mail.com" required>
+            <label for="registerPassword">Пароль</label>
+            <input type="password" id="registerPassword" placeholder="Ваш пароль" required>
+            <label for="registerConfirm">Підтвердіть пароль</label>
+            <input type="password" id="registerConfirm" placeholder="Повторіть пароль" required>
+            <button type="submit">Зареєструватися</button>
+            <p class="auth-note">Вже маєте акаунт? <a href="login.html">Увійти</a></p>
+            <div id="registerMessage" class="auth-message"></div>
+        </form>
+    </main>
+
     <div class = "footer">
         <div class = "img-footer">
             <img class = "footer-logo" src="img/logo.png" alt="Logo">
